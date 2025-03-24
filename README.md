@@ -4,6 +4,12 @@ The BoDmagh dataset is a Supervised Fine-Tuning (SFT) dataset for the Darija lan
 
 I update the dataset daily, so make sure to check the repository regularly.
 
+## Time Spent  
+
+Creating this dataset has been a labor of love. I’ve dedicated approximately **2 hours and 30 minutes** so far, manually curating each entry to ensure high quality. I continue to add new entries daily, so this number will keep growing.
+
+- **Time spent**: 2h:30m
+
 ## Content
 
 ### 1. Structure
