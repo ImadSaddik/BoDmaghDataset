@@ -6,7 +6,7 @@ I update the dataset daily, so make sure to check the repository regularly.
 
 ## Time Spent  
 
-Creating this dataset has been a labor of love. I’ve dedicated approximately **4 hours and 55 minutes** so far, manually curating each entry to ensure high quality. I continue to add new entries daily, so this number will keep growing.
+Creating this dataset has been a labor of love. I’ve dedicated approximately **5 hours and 48 minutes** so far, manually curating each entry to ensure high quality. I continue to add new entries daily, so this number will keep growing.
 
 ## Content
 
