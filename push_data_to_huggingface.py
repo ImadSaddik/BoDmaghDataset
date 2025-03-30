@@ -7,7 +7,7 @@ from huggingface_hub import HfApi
 
 load_dotenv()
 
-with open("../dataset.json", "r", encoding="utf-8") as f:
+with open("dataset.json", "r", encoding="utf-8") as f:
     raw_data = json.load(f)
 
 adapted_data = []
