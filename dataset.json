@@ -2238,15 +2238,5 @@
 			"role": "assistant",
 			"content": "صحيح كل دورة فيها 24 ساعة."
 		}
-	],
-	[
-		{
-			"role": "user",
-			"content": ""
-		},
-		{
-			"role": "assistant",
-			"content": ""
-		}
 	]
 ]
