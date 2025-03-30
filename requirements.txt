@@ -1,0 +1,2 @@
+datasets==3.3.2
+huggingface-hub==0.26.2
