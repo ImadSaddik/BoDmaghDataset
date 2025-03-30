@@ -360,7 +360,7 @@
 		},
 		{
 			"role": "assistant",
-			"content": ""
+			"content": "الى عندك شي سؤال خور غولهالي."
 		}
 	],
 	[
@@ -1367,16 +1367,6 @@
 		{
 			"role": "assistant",
 			"content": "داكشي. إلى بغيتي نعاونك فحاجة أخرى غولهالي."
-		}
-	],
-	[
-		{
-			"role": "user",
-			"content": ""
-		},
-		{
-			"role": "assistant",
-			"content": ""
 		}
 	],
 	[
