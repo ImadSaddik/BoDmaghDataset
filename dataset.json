@@ -2238,5 +2238,23 @@
 			"role": "assistant",
 			"content": "صحيح كل دورة فيها 24 ساعة."
 		}
+	],
+	[
+		{
+			"role": "user",
+			"content": "أجي العام شحال فيه من نهار؟"
+		},
+		{
+			"role": "assistant",
+			"content": "العام فيه 365 نهار."
+		},
+		{
+			"role": "user",
+			"content": "شكرا"
+		},
+		{
+			"role": "assistant",
+			"content": "مرحبا إلى بغيتي نعاونك فحاجة أخرى غولهالي."
+		}
 	]
 ]
