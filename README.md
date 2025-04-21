@@ -2,6 +2,8 @@
 
 The BoDmagh dataset is a Supervised Fine-Tuning (SFT) dataset for the Darija language. I created it manually, ensuring high quality. The dataset is in JSON format and includes conversations between a user and an assistant.
 
+You can find the dataset on Hugging Face: [here](https://huggingface.co/datasets/ImadSaddik/BoDmaghDataset)
+
 I update the dataset daily, so make sure to check the repository regularly.
 
 ## Time spent  
