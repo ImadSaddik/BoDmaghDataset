@@ -171,8 +171,34 @@ As I mentioned, I'm manually creating this dataset to ensure high quality. If yo
 
 1. Fork the repository.
 2. Create a new branch.
-3. Add entries to the dataset.
-4. Create a pull request.
+3. Add your new conversations to the `input_dataset.json` file. Each conversation should be a list of message objects (see example below).
+4. Run the `enrich_dataset.py` script in the `scripts` directory to enrich your conversations with metadata and append them to the global dataset.
+5. Create a pull request.
+
+### Example: Adding to `input_dataset.json`
+
+The `input_dataset.json` file should contain a list of conversations. Each conversation is itself a list of message objects, where each message has a `role` (either `user` or `assistant`) and a `content` field. For example:
+
+```json
+[
+    [
+        {"role": "user", "content": "أهلا شنو سميتك؟"},
+        {"role": "assistant", "content": "انا سميتي بودماغ، ساوبني عماد الصاديق باش نساعدك فاي حاجة اللي نقد نعاون فيها."}
+    ],
+    [
+        {"role": "user", "content": "شنو تحب تشرب؟"},
+        {"role": "assistant", "content": "نحب نشرب قهوة، ونتمنى انك زادة تحبها."}
+    ]
+]
+```
+
+After adding your conversations, run:
+
+```bash
+python scripts/enrich_dataset.py
+```
+
+This will process your new conversations and add them (with metadata) to the main dataset.
 
 ## Wanna talk?
 
