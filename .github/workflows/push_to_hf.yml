@@ -34,4 +34,4 @@ jobs:
       - name: Create and push dataset
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: python push_data_to_huggingface.py
+        run: python scripts/push_data_to_huggingface.py
