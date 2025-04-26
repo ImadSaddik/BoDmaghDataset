@@ -14,65 +14,118 @@ Creating this dataset has been a labor of love. I’ve dedicated approximately *
 
 ### 1. Structure
 
-Each item in the JSON file is a list. The list contains multiple objects, where each object represents a turn in the conversation. The turns are marked as either `user` or `assistant`. The `system` message is not included, but you can add it at the start of the list if needed.
+The dataset is a JSON file containing a list of objects. Each object represents a single conversation entry and includes several metadata fields along with the conversation itself.
 
-Here are 2 examples:
+Here are the main fields within each conversation object:
+
+* **`id`**: A unique integer identifier for the conversation.
+* **`conversation`**: A list of message objects representing the turns in the conversation. Each message object has:
+  * `role`: Either `user` or `assistant`.
+  * `content`: The text content of the message turn (plain text).
+* **`token_count`**: The total number of tokens in the `conversation` field, calculated using the [darija tokenizer](https://github.com/ImadSaddik/DarijaTokenizers).
+* **`turns_count`**: The total number of turns (messages) in the `conversation`.
+* **`markdown_conversation`**: A list of message objects similar to `conversation`, but the `content` may include Markdown formatting (e.g., bolding, lists) where applicable.
+* **`source`**: Indicates how the conversation was generated (e.g., "Manually generated").
+* **`topic`**: A label indicating the primary topic of the conversation (e.g., "Science", "Travel", "Chit-chat/Games/Humor").
+* **`safety_flags`**: A list of strings indicating any safety concerns identified in the conversation (e.g., `["harmful_content_request", "refusal"]`). An empty list `[]` means the conversation is considered safe.
+
+*Note: The `system` message is not included, but you can add it if needed for your specific fine-tuning format.*
+
+Here is an example of a single conversation object:
 
 ```json
-[
-    [
+{
+    "id": 74,
+    "conversation": [
         {
             "role": "user",
-            "content": "السلام لباس؟"
+            "content": "شحال بعيدة علينا الشمس؟"
         },
         {
             "role": "assistant",
-            "content": "لاباس الحمد لله، كاين شي حاجا بغيتي نعاونك فيها؟"
+            "content": "الشمس بعيدة علينا ب 150 مليون كيلومتر تقريبا."
         },
         {
             "role": "user",
-            "content": "اه عافاك بغيت نسافر فالمغرب فالصيف ولكن معرفتش فين نمشي. ممكن تعاوني؟"
+            "content": "ويلي ويلي شحال بعيداااا."
         },
         {
             "role": "assistant",
-            "content": "بلان كاين بزاف ديال البلايص اللي تقد تمشي ليهم فالمغرب، انا كنقترح عليك هدو:\n\n- شفشاون: هدي مدينة فالجبل، الديور ديالها زرقين او الجو فالمدينة كيجيب الراحة.\n- الصويرة: هاد المدينة فيها البحر الا فيك ميعوم. البحر ديالها زوين او فيها المدينة القديمة.\n- الداخلة: الداخلة هي مدينة فالصحرا ديال المغرب، حتاهيا فيها البحر. الناس كيجيو ليه من العالم كامل باش يلعبوا السبور.\n- مراكش: هاد المدينة عزيزة على السياح لكيجيو من برا. فيها جامع الفنا، المدينة القديمة ولكن فالصيف دايرة بحال الفران.\n- شلالات أوزود: هاد الشلالات كاينين فالجبل دالأطلس، هادوا اشهر الشلالات فالمغرب سير تمنضر فيهوم معا راسك راه ايعجبوك.\n\nكاين بزاف ديال البلايس اخرين فالمغرب ولكن غولي بعدا واش هدوا عجبوك."
+            "content": "واييه راه هاد الكون كبير بزاف صعيب الواحد يتخيل الكبورية ديالو."
         },
         {
             "role": "user",
-            "content": "شكرا بزاف اصاحبي"
+            "content": "شناهية سنة ضوئية؟"
         },
         {
             "role": "assistant",
-            "content": "مرحبا، إلى بغيتي شت حاجة أخرى غولهالي انا هنا باش نعاونك."
+            "content": "هي المسافة اللي الضو كيضربها فعام."
         },
         {
             "role": "user",
-            "content": "لالا صافي مبغيت حتى شي حاجة"
+            "content": "شحال فيها من كيلومتر؟"
         },
         {
             "role": "assistant",
-            "content": "اوكي اوا نمشي نرتاح شوية على هاد الحساب. ستمتع معا راسك بالتسافيرة."
+            "content": "سنة ضوئية فيها 9.461 تريليون كيلومتر."
+        },
+        {
+            "role": "user",
+            "content": "والله اتا بزاف هاد الكون."
+        },
+        {
+            "role": "assistant",
+            "content": "الى عندك شي سؤال خور غولهالي."
         }
     ],
-    [
+    "token_count": 97,
+    "turns_count": 10,
+    "markdown_conversation": [
         {
             "role": "user",
-            "content": "عافاك شحال من مدينة كاينة فالمغرب؟"
+            "content": "شحال بعيدة علينا الشمس؟"
         },
         {
             "role": "assistant",
-            "content": "الصراحة صعيب تلقى رقم واحد ولكن على حساب متعلمت كاين شي 247 مدينة."
+            "content": "الشمس بعيدة علينا ب **150 مليون كيلومتر** تقريبا."
         },
         {
             "role": "user",
-            "content": "اوكي شكرا."
+            "content": "ويلي ويلي شحال بعيداااا."
         },
         {
             "role": "assistant",
-            "content": "العفو، كاين شي حاجة أخرى بغيتي نعاونك فيها؟"
+            "content": "واييه راه هاد الكون كبير بزاف صعيب الواحد يتخيل الكبورية ديالو."
+        },
+        {
+            "role": "user",
+            "content": "شناهية سنة ضوئية؟"
+        },
+        {
+            "role": "assistant",
+            "content": "هي المسافة اللي الضو كيضربها فعام."
+        },
+        {
+            "role": "user",
+            "content": "شحال فيها من كيلومتر؟"
+        },
+        {
+            "role": "assistant",
+            "content": "سنة ضوئية فيها **9.461 تريليون كيلومتر**."
+        },
+        {
+            "role": "user",
+            "content": "والله اتا بزاف هاد الكون."
+        },
+        {
+            "role": "assistant",
+            "content": "الى عندك شي سؤال خور غولهالي."
         }
-    ]
-]
+    ],
+    "source": "Manually generated",
+    "topic": "Science",
+    "safety_flags": []
+}
 ```
 
 ### 2. Assistant's name
@@ -125,6 +178,6 @@ As I mentioned, I'm manually creating this dataset to ensure high quality. If yo
 
 You can contact me through:
 
-- **Discord** - Username: imad_saddik
-- **LinkedIn** – [Connect with me](https://www.linkedin.com/in/imadsaddik/).
-- **Email** – [simad3647@gmail.com](mailto:simad3647@gmail.com).  
+* **Discord:** Username: imad_saddik
+* **LinkedIn:** [Connect with me](https://www.linkedin.com/in/imadsaddik/).
+* **Email:** [simad3647@gmail.com](mailto:simad3647@gmail.com).
