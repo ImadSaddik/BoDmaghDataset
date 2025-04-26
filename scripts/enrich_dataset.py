@@ -216,6 +216,11 @@ def append_to_the_global_dataset(dataset_to_add: list) -> None:
         json.dump(global_dataset, f, indent=4, ensure_ascii=False)
 
 
+def clear_the_dataset_to_enrich_file() -> None:
+    with open("../input_dataset.json", "w") as f:
+        json.dump([], f, indent=4, ensure_ascii=False)
+
+
 if __name__ == "__main__":
     sys.path.append("..")
     load_dotenv()
@@ -224,5 +229,6 @@ if __name__ == "__main__":
     client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
     enriched_dataset = enrich_dataset(dataset_to_enrich, client)
     append_to_the_global_dataset(enriched_dataset)
+    clear_the_dataset_to_enrich_file()
     logger.info(
         "Successfully enriched the dataset and appended it to the global dataset.")
