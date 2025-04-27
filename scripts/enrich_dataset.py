@@ -82,7 +82,7 @@ def _add_token_count(data: list) -> None:
                 tokens = tokenizer.encode(content)
                 token_count += len(tokens)
 
-    entry["token_count"] = token_count
+        entry["token_count"] = token_count
 
 
 def _load_tokenizer() -> object:
@@ -96,7 +96,7 @@ def _load_tokenizer() -> object:
 def _add_number_of_turns(data: list) -> None:
     for entry in data:
         number_of_turns = len(entry["conversation"])
-        entry["number_of_turns"] = number_of_turns
+        entry["turns_count"] = number_of_turns
 
 
 def _add_conversation_in_markdown_format(data: list, client: Client) -> None:
@@ -143,7 +143,7 @@ def _add_conversation_in_markdown_format(data: list, client: Client) -> None:
 
 def _add_data_source(data: list) -> None:
     for entry in data:
-        entry["data_source"] = "Manually generated"
+        entry["source"] = "Manually generated"
 
 
 def _add_conversation_topic(data: list, client: Client) -> None:
@@ -213,12 +213,12 @@ def append_to_the_global_dataset(dataset_to_add: list) -> None:
             global_dataset.append(entry)
 
     with open("../dataset.json", "w") as f:
-        json.dump(global_dataset, f, indent=4, ensure_ascii=False)
+        json.dump(global_dataset, f, indent=2, ensure_ascii=False)
 
 
 def clear_the_dataset_to_enrich_file() -> None:
     with open("../input_dataset.json", "w") as f:
-        json.dump([], f, indent=4, ensure_ascii=False)
+        json.dump([], f, indent=2, ensure_ascii=False)
 
 
 if __name__ == "__main__":

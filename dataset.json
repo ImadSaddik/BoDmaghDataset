@@ -9295,7 +9295,8 @@
 				"content": "باش تعلم اللونغلي دغيا، خاصك تحاول تخدمها كل نهار. شوف فيديوهات باللونغلي، قرا كتوبا اولا مقالات، او حاول تهدر بيها وخا تغلط. كاينين تطبيقات زوينين بحال Duolingo أو Memrise اللي تقدر تخدم باش يعاونوك التعلم. المهم أهم حاجة هي أنه تدير مجهود كل نهار."
 			}
 		],
-		"number_of_turns": 2,
+		"token_count": 85,
+		"turns_count": 2,
 		"markdown_conversation": [
 			{
 				"role": "user",
@@ -9306,8 +9307,8 @@
 				"content": "باش تعلم اللونغلي دغيا، خاصك تحاول تخدمها كل نهار. شوف فيديوهات باللونغلي، قرا كتوبا اولا مقالات، او حاول تهدر بيها وخا تغلط. كاينين تطبيقات زوينين بحال **Duolingo** أو **Memrise** اللي تقدر تخدم باش يعاونوك التعلم. المهم أهم حاجة هي أنه تدير مجهود كل نهار."
 			}
 		],
-		"data_source": "Manually generated",
-		"topic": "Language",
+		"source": "Manually generated",
+		"topic": "Education",
 		"safety_flags": []
 	},
 	{
@@ -9346,7 +9347,8 @@
 				"content": "مرحبا، الله يعاونك. إلى حتاجيتي شي حاجة آخرى انا هنا."
 			}
 		],
-		"number_of_turns": 8,
+		"token_count": 368,
+		"turns_count": 8,
 		"markdown_conversation": [
 			{
 				"role": "user",
@@ -9362,7 +9364,7 @@
 			},
 			{
 				"role": "assistant",
-				"content": "واخا، إلى بغيتي تبدا بالأساسيات او تصاوب موقع بسيط، أنصحك تبدا بـ **HTML** او **CSS**. هادو هما اللغات اللي كتصاوب بيهوم أي موقع. من بعد تقدر تزيد عليهوم **JavaScript** باش تعلم كيفاش تخلي الناس يتفاعلو معا الموقع ديالك. كاين بزاف ديال المواقع فين تقدر تعلم هادشي فابور بلا متخلص حتى ريال بحال **freeCodeCamp**، او **W3Schools**."
+				"content": "واخا، إلى بغيتي تبدا بالأساسيات او تصاوب موقع بسيط، أنصحك تبدا بـ **HTML** او **CSS**. هادو هما اللغات اللي كتصاوب بيهوم أي موقع. من بعد تقدر تزيد عليهوم **JavaScript** باش تعلم كيفاش تخلي الناس يتفاعلو معا الموقع ديالك. كاين بزاف ديال المواقع فين تقدر تعلم هادشي فابور بلا متخلص حتى ريال بحال freeCodeCamp، او W3Schools."
 			},
 			{
 				"role": "user",
@@ -9381,7 +9383,7 @@
 				"content": "مرحبا، الله يعاونك. إلى حتاجيتي شي حاجة آخرى انا هنا."
 			}
 		],
-		"data_source": "Manually generated",
+		"source": "Manually generated",
 		"topic": "Technology",
 		"safety_flags": []
 	},
@@ -9422,7 +9424,7 @@
 			}
 		],
 		"token_count": 378,
-		"number_of_turns": 8,
+		"turns_count": 8,
 		"markdown_conversation": [
 			{
 				"role": "user",
@@ -9457,7 +9459,7 @@
 				"content": "مرحبا مرحبا! إلى بغيتي نعاونك فشي حاجة أخرى قولهالي."
 			}
 		],
-		"data_source": "Manually generated",
+		"source": "Manually generated",
 		"topic": "Task Assistance",
 		"safety_flags": []
 	}
