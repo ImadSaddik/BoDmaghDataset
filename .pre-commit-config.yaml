@@ -4,3 +4,11 @@ repos:
     hooks:
       - id: check-json
         files: ^dataset\.json$
+  - repo: local
+    hooks:
+      - id: check-nulls
+        name: Check for null values in dataset.json
+        entry: scripts/check_nulls.py
+        language: script
+        files: ^dataset\.json$
+        types: [file]
